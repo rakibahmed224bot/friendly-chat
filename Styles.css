@@ -1,0 +1,135 @@
+/* সাধারণ স্টাইলস */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#chat-box {
+    width: 100%;
+    height: calc(100% - 120px); /* ইনপুট কন্টেইনার এবং কাউন্টারের উচ্চতা বাদে পুরো স্ক্রীন */
+    background: url('background-image.png') no-repeat center center; /* ব্যাকগ্রাউন্ড ইমেজ যুক্ত করুন */
+    background-size: cover; /* ইমেজটি পুরো এলাকা কভার করবে */
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box; 
+    
+}
+
+#input-container {
+    display: flex;
+    width: 100%;
+    height: 60px; /* ইনপুট কন্টেইনারের উচ্চতা নির্ধারণ */
+    background: #fff;
+    border-top: 1px solid #ddd;
+    position: fixed; /* স্ক্রীনে সবসময় প্রদর্শনের জন্য */
+    bottom: 0;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box; /* প্যাডিং অন্তর্ভুক্ত করার জন্য */
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    box-sizing: border-box; /* প্যাডিং অন্তর্ভুক্ত করার জন্য */
+}
+
+#enter-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#enter-button:hover {
+    background-color: #0056b3;
+}
+
+/* বট প্রতিক্রিয়া জন্য অ্যানিমেশন */
+.bot-response {
+    background-color: #e9ecef;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+    max-width: 70%;
+}
+
+/* বার্তা কাউন্টারের স্টাইল */
+#message-counter {
+    width: auto;
+    height: 60px;
+    background: #00FF00;
+    border: 4px solid #ddd;
+    position: fixed; /* স্ক্রীনে সবসময় প্রদর্শনের জন্য */
+    top: 0px; /* উপরের থেকে ১০ পিক্সেল দূরে */
+    right: 0px; /* ডান পাশ থেকে ১০ পিক্সেল দূরে */
+    padding: 16px;
+    box-sizing: border-box; /* প্যাডিং অন্তর্ভুক্ত করার জন্য */
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+/* টাইপিং টেক্সটের জন্য ব্ল্যাক শ্যাডো */
+.bot-response {
+    background-color: #e9ecef;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+    max-width: 70%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bot-response:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* ব্ল্যাক শ্যাডো */
+    z-index: -1; /* যাতে টেক্সট উপরে থাকে */
+}
+
+.user-message {
+  color: black; /* টেক্সট কালো হবে */
+  background-color: white; /* ব্যাকগ্রাউন্ড সাদা হবে */
+  padding: 5px; /* কিছু প্যাডিং */
+  border-radius: 5px; /* কোণাগুলি গোলাকার করার জন্য */
+  margin-bottom: 5px; /* বার্তাগুলির মধ্যে কিছু ফাঁকা জায়গা */
+}
+
+/* লোডিং স্ক্রীনের স্টাইল */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+  z-index: 1000; /* অন্যান্য উপাদানের উপর প্রদর্শনের জন্য */
+}
+
+.loading-message {
+  max-width: 80%;
+}
