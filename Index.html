@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👽Mr Bot</title>
+    <title>Mr Bot</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="chat-box"></div>
+    <div id="chat-container">
+        <div id="chat-box"></div>
 
-    <div id="input-container">
-        <input type="text" id="user-input" placeholder="কিছু লেখ রে 🥺...">
-        <button id="enter-button">টিপতে পারিস তো</button>
+        <div id="input-container">
+            <textarea id="user-input" placeholder="কিছু লেখ রে 🥺..."></textarea>
+            <button id="enter-button" disabled>টিপতে পারিস তো</button>
+        </div>
+    </div>
+
+    <div id="start-container">
+        <button id="start-button">এখানে আগে টিপ দে</button>
     </div>
 
     <div id="message-counter">
-        বার্তা পাঠাইছোস: <span id="count">0</span> বার
+        বার্তা পাঠাইছোস: <span id="count">0</span> টা
     </div>
 
-    <script src="script.js"></script>
     <audio id="typing-sound" src="typing-sound.mp3"></audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
